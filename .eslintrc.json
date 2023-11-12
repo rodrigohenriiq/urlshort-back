@@ -9,7 +9,7 @@
         "prettier"
     ],
     "parserOptions": {
-        "ecmaVersion": 14,
+        "ecmaVersion": 6,
         "sourceType": "module"
     },
     "rules": {
