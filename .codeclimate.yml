@@ -1,13 +1,10 @@
 version: "2"
-checks:
-  argument_count:
-    config:
-      threshold: 4
 plugins:
-  rubocop:
-    enabled: true
   eslint:
     enabled: true
-    channel: "eslint-6"
-  csslint:
-    enabled: true
+    channel: "eslint-7"
+    config:
+      config: .eslintrc.json
+exclude_patterns:
+  - "node_modules/"
+  - "test/"
