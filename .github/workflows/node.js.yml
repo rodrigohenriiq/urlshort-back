@@ -29,5 +29,5 @@ jobs:
       run: ./cc-test-reporter before-build
 
     - name: After build
-      run: |
-        ./cc-test-reporter after-build --exit-code ${{ job.status }} --id ${{ secrets.CC_TEST_REPORTER_ID }}
+      run: ./cc-test-reporter after-build --exit-code ${{ steps.test_step.outcome }} --id ${{ secrets.CC_TEST_REPORTER_ID }}
+
