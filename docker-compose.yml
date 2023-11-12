@@ -1,0 +1,27 @@
+version: '3.1'
+services:
+  app:
+    image: node:16
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_USER=admin
+      - DB_PASSWORD=123456789
+      - DB_NAME=urlshortener
+  db:
+    image: postgres:latest
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=123456789
+      - POSTGRES_DB=urlshortener
+
+volumes:
+  postgres_data:
