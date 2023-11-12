@@ -1,0 +1,12 @@
+version: "2"
+checks:
+  argument_count:
+    config:
+      threshold: 4
+plugins:
+  rubocop:
+    enabled: true
+  eslint:
+    enabled: true
+  csslint:
+    enabled: true
