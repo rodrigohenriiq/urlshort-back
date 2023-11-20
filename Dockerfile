@@ -13,8 +13,14 @@ RUN npm install
 # Copiar os arquivos do projeto para o diretório de trabalho
 COPY . .
 
+# Instalar bcrypt
+RUN npm install bcrypt
+
 # Expôr a porta que a aplicação irá rodar
 EXPOSE 3000
 
 # Comando para rodar a aplicação
-CMD ["node", "app.js"]
+CMD ["node", "server.js"]
+
+# Comando para manter o contêiner rodando
+# CMD ["tail", "-f", "/dev/null"]

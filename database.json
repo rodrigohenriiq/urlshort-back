@@ -1,0 +1,11 @@
+{
+    "dev": {
+      "driver": "pg",
+      "host": "db",
+      "port": 5432,
+      "database": "urlshortener",
+      "user": "admin",
+      "password": "123456789"
+    }
+  }
+  
