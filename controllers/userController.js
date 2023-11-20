@@ -1,4 +1,3 @@
-const bcrypt = require('bcrypt');
 const userService = require('../services/userService'); // Importando o userService
 const { generateToken } = require('../utils/authHelpers'); // Importando o generateToken
 
